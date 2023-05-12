@@ -1,4 +1,4 @@
-const {newStudentController}=require("../controllers/newStudent")
+const {newStudentController}=require("../../controllers/Student/newStudent")
 
 const newStudentHandler=async(req,res)=>{
     try {

@@ -3,24 +3,22 @@ const { DataTypes } = require('sequelize');
 // Luego le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
   // defino el modelo
-  sequelize.define('Subject', {
-    id:{
+  sequelize.define('Attendance', {
+    idAttendance:{
       type:DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       allowNull:false,
       primaryKey:true,
 
     },
-    nameSubject: {
+    present: {
       type: DataTypes.STRING,
-      allowNull: false,
+      
     },
-    teachers:{
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
+    absent:{
+      type: DataTypes.STRING,
+      
     }
-    
-
   }, {
     timestamps: false,
   });

@@ -1,4 +1,4 @@
-const {getAllSubject}=require("../controllers/getAllSubject")
+const {getAllSubject}=require("../../controllers/Subject/getAllSubject")
 
 const getAllSubjectHandler=async(req,res)=>{
     try {

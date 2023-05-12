@@ -1,4 +1,4 @@
-const {getStudentById}=require("../controllers/getStudentById")
+const {getStudentById}=require("../../controllers/Student/getStudentById")
 
 const getStudentsByIdHandler=async(req,res)=>{
     try {

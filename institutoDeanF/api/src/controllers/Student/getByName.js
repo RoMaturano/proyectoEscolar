@@ -1,4 +1,4 @@
-const {getAllStudent} = require("../controllers/getAllStudent")
+const {getAllStudent} = require("../Student/getAllStudent")
 
 const getByName = async (name) => {
 try {

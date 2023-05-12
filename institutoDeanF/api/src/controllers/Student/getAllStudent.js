@@ -1,6 +1,6 @@
-const {Student}= require ("../db")
-const studentData = require("../../Data.js")
-const {Subject}=require("../db")
+const {Student}= require ("../../db")
+const studentData = require("../../../Data.js")
+const {Subject}=require("../../db")
 
 
 const auxStudent= studentData.map((el)=>{

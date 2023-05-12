@@ -1,4 +1,4 @@
-const {Student}= require("../db")
+const {Student}= require("../../db")
 
 const newStudentController=async(auxNewStudent )=>{
 try {

@@ -1,4 +1,4 @@
-const {Subject}=require("../db")
+const {Subject}=require("../../db")
 
 
 const getAllSubject= async ()=>{

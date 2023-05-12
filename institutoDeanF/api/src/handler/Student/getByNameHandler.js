@@ -1,4 +1,4 @@
-const {getByName}= require("../controllers/getByName")
+const {getByName}= require("../../controllers/Student/getByName")
 
 const getByNameHandler=async (req,res)=>{
     try {

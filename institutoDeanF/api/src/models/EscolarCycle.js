@@ -3,24 +3,22 @@ const { DataTypes } = require('sequelize');
 // Luego le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
   // defino el modelo
-  sequelize.define('Subject', {
-    id:{
+  sequelize.define('EscolarCycle', {
+    idEscolarCycle:{
       type:DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       allowNull:false,
       primaryKey:true,
 
     },
-    nameSubject: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    division: {
+        type: DataTypes.ENUM("A","B","C","D","E"),
+        allowNull: false,
     },
-    teachers:{
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
+    course:{
+        type: DataTypes.ENUM("1","2","3","4","5","6"),
+        allowNull: false,
     }
-    
-
   }, {
     timestamps: false,
   });

@@ -1,4 +1,4 @@
-const {getAllStudent} = require("../controllers/getAllStudent")
+const {getAllStudent} = require("../../controllers/Student/getAllStudent")
 
 const getAllStudentHandler = async (req, res)=>{
     try {
