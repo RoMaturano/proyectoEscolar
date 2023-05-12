@@ -1,0 +1,26 @@
+.number{
+    border-radius: 0.5rem;
+    font-weight:bold;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background: radial-gradient(#affc41, rgb(49, 40, 40));
+    box-sizing: border-box;
+    color: black;
+    width:80px;
+    height: 27px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.number:hover{
+    width:85px;
+    height:32px;
+}
+.div{
+    display: inline-block;
+}
+.li{
+    display: inline;
+
+
+}
+
