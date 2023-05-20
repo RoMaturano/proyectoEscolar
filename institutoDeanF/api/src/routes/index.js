@@ -9,14 +9,32 @@ const {newStudentHandler}=require("../handler/Student/newStudentHandler")
 const {getByNameHandler}=require("../handler/Student/getByNameHandler")
 const {getStudentsByIdHandler}=require("../handler/Student/getStudentByIdHandler")
 const {newSubjectHandler}=require("../handler/Subject/newSubjectHandler")
+const {postEscolarCycleHandler}=require("../handler/EscolarCycle/postEscolarCycleHandler")
+const {postAttendanceHandler}=require("../handler/Attendance/postAttendanceHandler")
 
+
+
+
+
+//student
 router.get("/student",getAllStudentHandler)
 router.post("/student",newStudentHandler)
 router.get("/student/:name",getByNameHandler)
 router.get("/student/student/:id",getStudentsByIdHandler)
 
+//Subject
 router.get("/subject",getAllSubjectHandler)
 router.post("/subject",newSubjectHandler)
+
+//EscolarCycle
+router.post("/escolarcycle",postEscolarCycleHandler)
+
+//Attendance
+//router.post("/attendance",postAttendanceHandler)
+
+
+
+
 
 
 module.exports = router;

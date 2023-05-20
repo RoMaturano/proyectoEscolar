@@ -12,11 +12,11 @@ module.exports = (sequelize) => {
 
     },
     present: {
-      type: DataTypes.STRING,
+      type: DataTypes.BOOLEAN,
       
     },
     absent:{
-      type: DataTypes.STRING,
+      type: DataTypes.BOOLEAN,
       
     }
   }, {

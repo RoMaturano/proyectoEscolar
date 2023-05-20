@@ -1,6 +1,6 @@
-const {Student}= require ("../../db")
+const {Student,EscolarCycle,Subject,Attendance}= require ("../../db")
 const studentData = require("../../../Data.js")
-const {Subject}=require("../../db")
+
 
 
 const auxStudent= studentData.map((el)=>{
@@ -18,9 +18,20 @@ const auxStudent= studentData.map((el)=>{
 const getAllStudent= async()=>{
     try {
     const student = await Student.findAll({
-        include:{
-            model:Subject,
-        }
+        include: [
+            {
+              model: Subject,
+            },
+            {
+              model: EscolarCycle,
+              as: 'EscolarCycle',
+              attributes: ["division", "course","yearCycle"],
+            },
+            {
+                model:Attendance,
+                attributes:["present","absent"]
+            }
+          ],
     })
 if(student.length===0){
     const studentDB= await Student.bulkCreate(auxStudent)

@@ -39,28 +39,28 @@ return(
     <div>
         <h1 className={style.title}>REGISTER</h1>
 
-        <Link to="/"><button>Home</button></Link>
-<div>
+        <Link to="/"><button className={style.butom}>Home</button></Link>
+<div className={style.conteinerDivDivs}>
 
-<label htmlFor="name">Name</label>
-<input type="text" value={register.name} name="name" onChange={changeHandler}></input>
+<label htmlFor="name" className={style.label}>Name</label>
+<input type="text" value={register.name} name="name" onChange={changeHandler} > </input>
 
-<label htmlFor="lastName">Last Name</label>
+<label htmlFor="lastName" className={style.label}>Last Name</label>
 <input type="text" value={register.lastName} name="lastName" onChange={changeHandler} ></input>
 
-<label htmlFor="dni">DNI</label>
+<label htmlFor="dni" className={style.label}>DNI</label>
 <input type="text" value={register.dni} name="dni" onChange={changeHandler}></input>
 
-<label htmlFor="birthDate">BirtDate</label>
+<label htmlFor="birthDate" className={style.label}>BirtDate</label>
 <input type="text" value={register.birthDate} name="birthDate" onChange={changeHandler}></input>
 
-<label htmlFor="email">E-mail</label>
+<label htmlFor="email" className={style.label}>E-mail</label>
 <input type="text" value={register.email} name="email" onChange={changeHandler}></input>
 
-<label htmlFor="phone">Phone</label>
+<label htmlFor="phone" className={style.label}>Phone</label>
 <input type="number" value={register.phone} name="phone" onChange={changeHandler}></input>
 
-<label htmlFor="image">Image</label>
+<label htmlFor="image" className={style.label}>Image</label>
 <input type="text" value={register.image} name="image" onChange={changeHandler}></input>
 </div>
 
@@ -68,7 +68,7 @@ return(
 </div>
 
 <div>
-    <button type="submit">Send</button>
+    <button type="submit" className={style.butom}>Send</button>
 </div>
 
     </form>
