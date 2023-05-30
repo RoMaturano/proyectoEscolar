@@ -5,7 +5,7 @@ const getStudentById=async(id)=>{
     try {
        
 const allStudent= await getAllStudent() 
-console.log(id.toString(),"---------")
+//console.log(id.toString(),"---------")
 
 const filterStudent = await allStudent.find((student)=>student.dataValues.id.toString()===id.toString())
 //student.dataValues.id.toString()==id.toString()

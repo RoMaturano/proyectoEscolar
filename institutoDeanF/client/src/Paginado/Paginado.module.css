@@ -9,7 +9,7 @@
     width:80px;
     height: 27px;
     font-family: 'Times New Roman', Times, serif;
-    
+    margin-left: 1.8px;
 }
 .number:hover{
     width:85px;
@@ -17,6 +17,7 @@
 }
 .div{
     display: inline-block;
+    align-items: center;
 }
 .li{
     display: inline;
