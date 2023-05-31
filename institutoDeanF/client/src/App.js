@@ -7,11 +7,11 @@ import {Route,Switch} from "react-router-dom";
 import React  from 'react';
 import ModifyStudent from "./components/ModifyStudent/ModifyStudent"
 import Grades from "./components/Grades/Grades"
-
+import "./App.css"
 
 function App() {
   return (
-    <div >
+    <div className='app' >
       <Switch>
         <Route exact path="/" render={()=><Home/>} />
         <Route path="/register" render={()=><Register/>}/>
