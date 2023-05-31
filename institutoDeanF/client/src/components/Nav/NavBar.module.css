@@ -1,0 +1,52 @@
+.divContainer{
+    width: 100%;
+    height: 6rem;
+    background: rgb(15, 76, 33);
+background: linear-gradient(0deg, rgb(15, 76, 33) 0%, rgba(58,125,68,1) 25%);
+    display: flex;
+    position: relative;
+}
+@media screen and (max-width: 300px) and (min-width: 720px){
+    .divContainer{
+       justify-content: center; 
+    }
+    
+}
+
+
+.buttomDiv{
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+    margin-left: 37rem;
+    justify-content: center;
+    display: flex;
+   
+}
+@media screen and (max-width: 300px) and (min-width: 720px) {
+    .buttomDiv{
+        height: 5rem; 
+        align-items: center;
+        text-align: center;
+        margin: 0%;
+    }
+    
+}
+
+.buttom{
+    border-radius: 8px;
+    height: 2.7rem;
+    width: 10rem;
+    background-color: white;
+    color: #029d36;
+    border-color: #029d36;
+    margin-left: 10px;
+   
+}
+.buttom:hover{
+    background-color: #D0DB97;
+    color: rgb(30, 101, 56);
+    height: 3rem;
+    transition: 8ms;
+    cursor: pointer;
+}

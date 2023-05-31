@@ -2,7 +2,7 @@ import { Link,useHistory } from "react-router-dom";
 import style from "./Register.module.css"
 import { useState } from "react";
 import axios from "axios"
-
+import NavBar from "../Nav/NavBar";
 const Register=()=>{
 
 const history=useHistory()
@@ -37,37 +37,38 @@ return(
     <form onSubmit={submitHandler}>
 
     <div>
+        <NavBar />
         <h1 className={style.title}>REGISTER</h1>
 
 <div className={style.conteinerDivDivs}>
-<div>
+<div className={style.divLabelInput}>
 <label htmlFor="name" className={style.label}>Name</label>
-<input type="text" value={register.name} name="name" onChange={changeHandler} />
+<input type="text" value={register.name} name="name" onChange={changeHandler}  className={style.input}/>
 </div>
-<div>
+<div className={style.divLabelInput}>
 <label htmlFor="lastName" className={style.label}>Last Name</label>
-<input type="text" value={register.lastName} name="lastName" onChange={changeHandler} />
+<input type="text" value={register.lastName} name="lastName" onChange={changeHandler}  className={style.input}/>
 </div>
-<div>
+<div className={style.divLabelInput}>
 <label htmlFor="dni" className={style.label}>DNI</label>
-<input type="text" value={register.dni} name="dni" onChange={changeHandler}/>
+<input type="text" value={register.dni} name="dni" onChange={changeHandler} className={style.input}/>
 </div>
-<div>
+<div className={style.divLabelInput}>
 <label htmlFor="birthDate" className={style.label}>BirtDate</label>
-<input type="text" value={register.birthDate} name="birthDate" onChange={changeHandler}/>
+<input type="text" value={register.birthDate} name="birthDate" onChange={changeHandler} className={style.input}/>
 </div>
-<div>
+<div className={style.divLabelInput}>
 <label htmlFor="email" className={style.label}>E-mail</label>
-<input type="text" value={register.email} name="email" onChange={changeHandler}/>
+<input type="text" value={register.email} name="email" onChange={changeHandler} className={style.input}/>
 </div>
-<div>
+<div className={style.divLabelInput}>
 <label htmlFor="phone" className={style.label}>Phone</label>
-<input type="number" value={register.phone} name="phone" onChange={changeHandler}/>
+<input type="number" value={register.phone} name="phone" onChange={changeHandler} className={style.input}/>
 </div>
 
-<div>
+<div className={style.divLabelInput}>
 <label htmlFor="image" className={style.label}>Image</label>
-<input type="text" value={register.image} name="image" onChange={changeHandler}/>
+<input type="text" value={register.image} name="image" onChange={changeHandler}  className={style.input}/>
 </div>
 </div>
 
