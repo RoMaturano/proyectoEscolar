@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import style from "./Home.module.css"
 import NavBar from "../Nav/NavBar"
 
@@ -12,26 +12,26 @@ const Home=()=>{
     //   ];
     
 return (
-    <div className={style.divcontainer}>
-       <NavBar></NavBar>
-       
-        <div className={style.containertitle}>
-        <h1 className={style.title}> Welcome to educative gestion sistem by Institute Dean Funes </h1>
-        </div>
-        <div className={style.homephotosContainer} >
-         <img className={style.img} src='https://www.institutodeanfunes.edu.ar/wp-content/uploads/2017/11/Instituto-Dean-Funes.jpg' alt="img"/>
-
-        </div>
-
-        
-
-
-
-
-
-
-
-    </div>
+    <body className={style.divcontainer}>
+        <header className={style.header}>
+            <div className={style.img}>
+                
+            </div>
+           
+            <div className={style.div1}>
+                <Link to="/"><h2 className={style.t1}>INSTITUCION EDUCATIVA</h2></Link>
+                <Link to="/"><h2 className={style.t2}>DEAN FUNES</h2></Link>
+            </div>
+            <div className={style.div2}>
+                <NavBar/>  
+            </div>
+        </header>
+        <main className={style.contenido}>
+            <hr className={style.hr1}></hr>
+            <h1>Bienvenido al sistema educativo de autogestion para la Institucion Dean Funes</h1>
+            <hr className={style.hr2}></hr>
+        </main>
+    </body>
 )
 
 
