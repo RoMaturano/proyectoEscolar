@@ -13,7 +13,8 @@ const [register,setRegister]= useState({
     birthDate:"",
     email:"",
     phone:0,
-    image:""
+    image:null,
+    imageURL:""
 })
 
 const changeHandler=(event)=>{
@@ -23,6 +24,14 @@ const changeHandler=(event)=>{
    
     })
 }
+const handleImageUpload = (event) => {
+    //console.log(event.target.files, "event.target.files")
+    const imageFile = event.target.files[0];
+    console.log(event.target.files[0], "esto es event.target.files[0]");
+    setRegister({ ...register, image: imageFile });
+    const imageURL = URL.createObjectURL(imageFile); // Generar la URL de la imagen
+    setRegister((prevRegister) => ({ ...prevRegister, imageURL }));
+  };
 
 const submitHandler=(event)=>{
     event.preventDefault()
@@ -34,7 +43,7 @@ console.log(register,"esto es el register enviado")
 
 
 return(
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} encType="multipart/form-data">
 
     <div>
         <NavBar />
@@ -68,7 +77,7 @@ return(
 
 <div className={style.divLabelInput}>
 <label htmlFor="image" className={style.label}>Image</label>
-<input type="text" value={register.image} name="image" onChange={changeHandler}  className={style.input}/>
+<input type="file"  name="image" onChange={handleImageUpload}  className={style.input}/>
 </div>
 </div>
 
@@ -77,7 +86,7 @@ return(
 
 <div className={style.buttomDiv}>
     <button type="submit" className={style.butom}>Send</button>
-    <Link to="/"><button className={style.butom}>Home</button></Link>
+    <Link to="/students"><button className={style.butom}>Home</button></Link>
 </div>
 
     </form>

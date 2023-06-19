@@ -13,7 +13,7 @@ const [detail,setDetail]=useState({})
 useEffect(()=>{
 axios.get(`http://localhost:3001/student/student/${id}`)
 .then ((data)=>{
-    // console.log(data.data,"esto es data");
+     console.log(data.data,"esto es data");
     // console.log(data.data.id,"esto es data.data.id");
     if(data.data.id){
         setDetail(data.data)
@@ -38,7 +38,7 @@ return(
             <p className={style.labelNumbers}> {detail.id}</p>
             <label className={style.label}>DNI: </label>
             <p className={style.labelNumbers}>{detail.dni}</p>
-            <label className={style.label}>PHONE: </label>
+            <label className={style.label}>CELULAR: </label>
             <p className={style.labelNumbers}>{detail.phone}</p>
             <label className={style.label}>EMAIL:</label>
             <p className={style.labelNumbers}> {detail.email}</p>
@@ -46,18 +46,20 @@ return(
             <p className={style.labelNumbers}>{detail.birthDate}</p>
             <label className={style.label} >MATERIAS</label>
             <p className={style.labelNumbers}>{detail.Subjects?.map(el=>el+" ")}</p>
-            <label className={style.label} >ESCOLAR CYCLE</label>
+            <label className={style.label} >CYCLO ESCOLAR</label>
             <p className={style.labelNumbers}>{detail.EscolarCycle}</p>
         </div>
 
         <div>
-            <img src={detail.image} alt= "img not found" className={style.img}></img>
+       
+        {console.log(detail,"detail.image")}
+            <img src={detail.image?detail.image:detail.imageURL} alt= "img not found" className={style.img}></img>
         </div>
         </div>
 
         <div className={style.buttomDiv}>
-            <Link to="/"><button className={style.butom}>Home</button></Link>
-            <Link to="/students"><button className={style.butom}>Return</button></Link>
+            <Link to="/"><button className={style.butom}>inicio</button></Link>
+            <Link to="/students"><button className={style.butom}>volver</button></Link>
         </div>
     </div>
 )

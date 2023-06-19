@@ -42,7 +42,8 @@ const CardsStudents = () => {
               birthDate={student.birthDate}
               email={student.email}
               phone={student.phone}
-              image={student.image}
+              image={student.imageURL?student.imageURL:student.image}
+              
             />
           );
         })}

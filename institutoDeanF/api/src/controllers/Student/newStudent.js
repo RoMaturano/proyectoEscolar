@@ -4,7 +4,7 @@ const newStudentController=async(auxNewStudent )=>{
 try {
     // console.log("hols en controller")
     // console.log(auxNewStudent,"auxNewStudentauxNewStudent")
-    const newStudent= await Student.create({name:auxNewStudent.name, lastName:auxNewStudent.lastName,dni:auxNewStudent.dni,birthDate:auxNewStudent.birthDate,email:auxNewStudent.email,phone:auxNewStudent.phone, image:auxNewStudent.birthDate }) 
+    const newStudent= await Student.create({name:auxNewStudent.name, lastName:auxNewStudent.lastName,dni:auxNewStudent.dni,birthDate:auxNewStudent.birthDate,email:auxNewStudent.email,phone:auxNewStudent.phone, image:auxNewStudent.birthDate , imageURL:auxNewStudent.imageURL}) 
     return newStudent
 
 } catch (error) {
