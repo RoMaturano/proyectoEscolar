@@ -8,17 +8,23 @@ import React  from 'react';
 import ModifyStudent from "./components/ModifyStudent/ModifyStudent"
 import Grades from "./components/Grades/Grades"
 import "./App.css"
+import SchoolData from "./components/SchoolData/SchoolData";
+import Attendance from "./components/Attendance/Attendance"
+
 
 function App() {
+  
   return (
     <div className='app' >
       <Switch>
         <Route exact path="/" render={()=><Home/>} />
         <Route path="/register" render={()=><Register/>}/>
         <Route path = "/detail/:id" render={()=><Detail/>}></Route> 
-        <Route path = "/students" render={()=><TotalStudent/>}></Route>
+        <Route path = "/students" render={()=><TotalStudent />}></Route>
         <Route path = "/modify" render={()=><ModifyStudent/>}></Route>
         <Route path = "/grades" render={()=><Grades/>}></Route>
+        <Route path = "/data" render={()=><SchoolData/>}></Route>
+        <Route path = "/attendance" render={()=><Attendance/>}></Route>
       </Switch>
     </div>
   );

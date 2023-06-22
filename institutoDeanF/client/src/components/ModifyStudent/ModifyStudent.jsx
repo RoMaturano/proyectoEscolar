@@ -1,16 +1,13 @@
 import style from "./Modify.module.css";
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import NavBar from "../Nav/NavBar";
- import validations from "./Validation"
 
 const ModifyStudent = () => {
-  
-    
-
-  const [formModify, setformModify] = useState({
-    id: "",
+  const [idsBack,setIidsBack]=useState()
+  const [formModify, setFormModify] = useState({
+    id: "", // Inicializar la propiedad id
     name: "",
     lastName: "",
     dni: 0,
@@ -19,24 +16,43 @@ const ModifyStudent = () => {
     phone: "",
     image: "",
   });
-   const [errors,setErrors]=useState({})
-  const submitHandler = (e) => {
-    e.preventDefault();
-
+  useEffect(()=>{
+    getAllIdsBack()
+  },[])
+  const getAllIdsBack=async()=>{
+    const iDs=await axios('http://localhost:3001/ids')
+    const data= iDs.data
+    setIidsBack(data)
+    
+  }
+  const submitHandler = () => {
     axios
-      .put("http://localhost:3001/student", formModify)
-      .then((res) => alert(res));
-
+    .put("http://localhost:3001/student", formModify)
+    .then((res) => alert(res));
+    
   };
-
+  
   const changeHandler = (e) => {
-    setErrors(validations({...formModify,[e.target.name]:e.target.value}))
-    setformModify({
-      ...formModify,
-      [e.target.name]: e.target.value,
-    });
+    // console.log(idsBack,"idsBack");
+    setFormModify({...formModify,[e.target.name]: e.target.value})
   };
-
+  //4aabd502-7e51-41b0-8c1c-9929290fb352
+ const comprobationIds=(id)=>{
+  
+  let bandera=false
+  for(let i =0; i<idsBack.length;i++ ){
+    if(idsBack[i]===id){
+      alert("el id si existe")
+      break;
+    }else{
+      bandera=true
+    }
+  }
+  if(bandera){
+    return alert("el id no se encuentra en la base de datos")
+  }
+}
+ 
   return (
   
      
@@ -48,15 +64,15 @@ const ModifyStudent = () => {
           <div className={style.conteinerDivDivs}>
 
           <div className={style.divLabelInput}>
-            <label htmlFor="id"  className={style.label}>Id</label>
+            <label htmlFor="id" className={style.label}>Id</label>
             <input
               type="text"
-              name="id"
               value={formModify.id}
+              name='id'
               onChange={changeHandler}
               className={style.input}
               />
-            {errors.id && <span className={style.span}>{errors.id}</span>}
+                 <button onClick={()=>comprobationIds(formModify.id)}>comprobar</button>      
           </div>
 
           <div className={style.divLabelInput}>
@@ -90,7 +106,7 @@ const ModifyStudent = () => {
               onChange={changeHandler}
               className={style.input}
               />
-            {errors.dni && <span className={style.span}>{errors.dni}</span>}
+           
           </div>
 
           <div className={style.divLabelInput}>
@@ -136,6 +152,7 @@ const ModifyStudent = () => {
                className={style.input}
                />
           </div>
+         
                </div>
           <div className={style.buttomDiv}>
             <button type="submit" className={style.buttomSend}>Send</button>

@@ -85,8 +85,8 @@ return(
 </div>
 
 <div className={style.buttomDiv}>
-    <button type="submit" className={style.butom}>Send</button>
-    <Link to="/students"><button className={style.butom}>Home</button></Link>
+    <button type="submit" className={style.butom}>ENVIAR</button>
+    <Link to="/"><button className={style.butom}>INICIO</button></Link>
 </div>
 
     </form>

@@ -1,5 +1,16 @@
-const {getStudentById}=require("../../controllers/Student/getStudentById")
+const {getStudentById,getALLid}=require("../../controllers/Student/getStudentById")
 
+
+const getALLidHandler=async(req,res)=>{
+    try {
+        const allIds=await getALLid()
+        res.status(200).json(allIds)
+
+
+    } catch (error) {
+        res.status(400).json({error:error.message})
+    }
+}
 const getStudentsByIdHandler=async(req,res)=>{
     try {
         //console.log("hola");
@@ -13,5 +24,6 @@ const getStudentsByIdHandler=async(req,res)=>{
 }
 
 module.exports={
-    getStudentsByIdHandler
+    getStudentsByIdHandler,
+    getALLidHandler
 }

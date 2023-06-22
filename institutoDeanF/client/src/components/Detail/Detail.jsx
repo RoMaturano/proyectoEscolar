@@ -13,7 +13,7 @@ const [detail,setDetail]=useState({})
 useEffect(()=>{
 axios.get(`http://localhost:3001/student/student/${id}`)
 .then ((data)=>{
-     console.log(data.data,"esto es data");
+    // console.log(data.data,"esto es data");
     // console.log(data.data.id,"esto es data.data.id");
     if(data.data.id){
         setDetail(data.data)
@@ -52,7 +52,7 @@ return(
 
         <div>
        
-        {console.log(detail,"detail.image")}
+       
             <img src={detail.image?detail.image:detail.imageURL} alt= "img not found" className={style.img}></img>
         </div>
         </div>
