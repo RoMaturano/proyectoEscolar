@@ -13,6 +13,7 @@ const NavBar=()=>{
         <Link to="/students"><button type="button" className={style.buttom}>Total estudiantes</button></Link>
         <Link to="/data"><button type="button" className={style.buttom}>Cargar datos escolares</button></Link>
         <Link to="/attendance"><button type="button" className={style.buttom}>Cargar asistencia</button></Link>
+        <Link to="/usuario"><button type="button" className={style.buttom}>ADMIN</button></Link> 
         </div>
 
         

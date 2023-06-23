@@ -7,7 +7,7 @@ const Home=()=>{
    
     
 return (
-    <body className={style.divcontainer}>
+    <div className={style.divcontainer}>
         <header className={style.header}>
             <div className={style.img}>
                 
@@ -26,7 +26,7 @@ return (
             <h1>Bienvenido al sistema educativo de autogestion para la Institucion Dean Funes</h1>
             <hr className={style.hr2}></hr>
         </main>
-    </body>
+    </div>
 )
 
 

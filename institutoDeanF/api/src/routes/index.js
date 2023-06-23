@@ -12,8 +12,8 @@ const {newSubjectHandler}=require("../handler/Subject/newSubjectHandler")
 const {postEscolarCycleHandler}=require("../handler/EscolarCycle/postEscolarCycleHandler")
 //const {postAttendanceHandler}=require("../handler/Attendance/postAttendanceHandler")
 const {putStudentHandler}=require("../handler/Student/putStudentHandler")
-
-
+const {getStaffTeacherHandler}=require("../handler/StaffTeacher/getStaffTeacherHandler")
+const {postStaffTeacherHandler}=require("../handler/StaffTeacher/postStaffTeacher")
 
 
 //student
@@ -33,8 +33,9 @@ router.post("/escolarcycle",postEscolarCycleHandler)
 //Attendance
 //router.post("/attendance",postAttendanceHandler)
 
-
-
+//staff
+router.get("/staff",getStaffTeacherHandler)
+router.post("/staff",postStaffTeacherHandler)
 
 
 
