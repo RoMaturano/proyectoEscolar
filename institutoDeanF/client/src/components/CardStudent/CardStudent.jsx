@@ -1,28 +1,22 @@
 import { Link } from "react-router-dom"
 import style from "./Card.module.css"
 
-const CardStudent=(student)=>{
+
+const CardStudent=({id,name,lastName,dni,birthDate,image})=>{
     return (
-        <div className={style.cardContainer}>
-                <Link to={`detail/${student.id}`} >
-                <h2>Name: {student.name}</h2>
-                </Link>
-
-                <h3>Lastname:{student.lastName}</h3>
-                <h3>DNI: {student.dni}</h3>
-                <h3>birthDate: {student.birthDate}</h3>
-
-
+            <div className={style.cardContainer}>
                 <div>
-                    
-            <img src={student.imageURL?student.imageURL :student.image} alt="img not insert" className={style.divimage}  ></img>
-
+                    <img src={image} alt="img not insert" className={style.divimage}  ></img>
                 </div>
-
-
-
-
-        </div>
+                <div>
+                    <Link to={`detail/${id}`}>
+                    <h2><span>Nombre:</span> {name}</h2>
+                    </Link>
+                    <h3><span>Apellido:</span> {lastName}</h3>
+                    <h3><span>DNI:</span> {dni}</h3>
+                    <h3><span>Fecha de nacimiento:</span> {birthDate}</h3>
+                </div>
+            </div>
     )
 }
 

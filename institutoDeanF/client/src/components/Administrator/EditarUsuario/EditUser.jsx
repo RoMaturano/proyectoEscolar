@@ -1,0 +1,124 @@
+import React, { useState } from "react";
+import axios from "axios";
+import style from "./EditUser.module.css";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+
+
+const EditUser=()=>{
+   
+const dispatch=useDispatch()
+    const [formModify, setformModify] = useState({
+        idStaffTeacher: "",
+        nameStaff: "",
+        lastNameStaff: "",
+        dniStaff: 0,
+        userStaff: "",
+        passwordStaff: "",
+        banned:"",
+       
+      });
+
+      const submitHandler = (e) => {
+        e.preventDefault();
+        axios
+          .put("http://localhost:3001/staff", formModify)
+          .then((res) => alert(res));
+    
+      };
+    
+      const changeHandler = (e) => {
+     
+        setformModify({
+          ...formModify,
+          [e.target.name]: e.target.value,
+        });
+      };
+   
+     
+
+    return(
+        <form onSubmit={submitHandler} className={style.divbody}>
+        <div  className={style.divcontainer}>
+          <div>
+         
+          <h1 className={style.title}>Modificar staff</h1>
+          </div>
+          <div className={style.conteinerDivDivs}>
+            <div className={style.divLabelInput}>
+              <label htmlFor="idStaffTeacher"  className={style.label}>ID</label>
+              <input
+                type="text"
+                name="idStaffTeacher"
+                value={formModify.idStaffTeacher}
+                onChange={changeHandler}
+                className={style.input}
+                />
+          
+            </div>
+            <div className={style.divLabelInput}>
+              <label htmlFor="nameStaff" className={style.label}>Nombre</label>
+              <input
+                type="text"
+                name="nameStaff"
+                value={formModify.nameStaff}
+                onChange={changeHandler}
+                className={style.input}
+                />
+            </div>
+            <div className={style.divLabelInput}>
+              <label htmlFor="lastNameStaff" className={style.label}>Apellido</label>
+              <input
+                type="text"
+                name="lastNameStaff"
+                value={formModify.lastNameStaff}
+                onChange={changeHandler}
+                className={style.input}
+              />
+            </div>
+            <div className={style.divLabelInput}>
+              <label htmlFor="dniStaff" className={style.label}>DNI</label>
+              <input
+                type="number"
+                name="dniStaff"
+                value={formModify.dniStaff}
+                onChange={changeHandler}
+                className={style.input}
+                />
+  
+            </div>
+            <div className={style.divLabelInput}>
+              <label htmlFor="userStaff" className={style.label}>Usuario</label>
+              <input
+                type="text"
+                name="userStaff"
+                value={formModify.userStaff}
+                onChange={changeHandler}
+                className={style.input}
+                />
+            </div>
+            <div className={style.divLabelInput}>
+              <label htmlFor="passwordStaff" className={style.label}>Password</label>
+              <input
+                type="password"
+                name="passwordStaff"
+                value={formModify.passwordStaff}
+                onChange={changeHandler}
+                className={style.input}
+              />
+            </div>
+            <Link to="/banned"><button>Bannear</button></Link>
+            <Link to="/usuario"><button>Volver</button></Link>
+          </div>
+          <div className={style.buttomDiv}>
+            <button type="submit" className={style.buttomSend}>ACEPTAR</button>
+          </div>
+      
+        </div>
+        </form>
+   
+    )
+
+}
+
+export default EditUser

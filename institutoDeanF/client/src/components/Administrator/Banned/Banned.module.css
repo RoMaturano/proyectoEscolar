@@ -1,0 +1,46 @@
+.butom{
+    border-radius: 8px;
+    height: 2.7rem;
+    width: 10rem;
+    background-color: white;
+    color: #029d36;
+    border-color: #029d36;
+    margin-left: 10px;
+}
+.butom:hover{
+    background-color: #D0DB97;
+    color: rgb(30, 101, 56);
+    height: 3rem;
+    transition: 8ms;
+    cursor: pointer;
+}
+.buttomDiv{
+    align-items: center;
+    text-align: center;
+    margin-top:  2rem;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 5rem;
+   
+}
+.divLabelInput{
+    margin-top: 2rem;
+}
+.input{
+    width: 15rem;
+    height: 1.2rem;
+    border-radius: 10px;
+    background-color: rgba(244, 215, 175, 0.588);
+   margin-left: 1rem;
+}
+.label{
+    
+    font-size: 2rem;
+text-transform: uppercase;
+justify-content: space-between;
+-webkit-text-fill-color: rgb(10, 10, 10);;
+-webkit-text-stroke: 1px rgb(30, 101, 56);
+font-weight: bold;
+text-shadow: 7px 4px 5px #D0DB97;
+   
+}

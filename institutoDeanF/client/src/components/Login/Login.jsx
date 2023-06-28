@@ -1,8 +1,8 @@
 import Validation from "./Validation"
 import { useState, useEffect } from "react";
-
-
-
+import style from "./Login.module.css"
+import userIcon from "../Home/user_icon.png";
+import passwordIcon from "../Home/password_icon.png";
 
 const Login=({ login })=>{
     const [userData, setUserData] = useState({
@@ -37,18 +37,29 @@ const Login=({ login })=>{
 
 
 return(
-    <form onSubmit={handleSubmit} className="formu">
-      <label className="lblForm" htmlFor="username"> Usuario</label><br />
-      <input className="inputForm" onChange={handleInputChange} value={userData.username} name="username" type="text" maxLength="35"/> <br /> <br />
-      {errors.username && <p className="pError">{errors.username}</p>}
-      
-       
-      <label className="lblForm" htmlFor="password"> Contraseña</label><br />
-      <input className="inputForm"onChange={handleInputChange} value={userData.password}name="password"type="text" /> <br /> <br />
-      {errors.password && <p className="pError">{errors.password}</p>} <br />
-     
-      <button className="btnForm">Login</button>
-    </form>
+  <form onSubmit={handleSubmit} className={style.form}>
+  <div className={style.conteinerFormLogin}>
+    <div className={style.formLogin}>
+      <div className={style.div}>
+        <label className="lblForm" htmlFor="username"> Usuario</label><br />
+        <div className={style.div2}>
+          <img src={userIcon} alt="User icon" className={style.userIcon}></img>
+          <input className="inputForm" onChange={handleInputChange} value={userData.username} name="username" type="text" maxLength="35"/> <br /> <br />
+        </div>
+        {errors.username && <p className="pError">{errors.username}</p>}
+      </div>
+      <div className={style.div}>
+        <label className="lblForm" htmlFor="password"> Contraseña</label><br />
+        <div className={style.div2}>
+          <img src={passwordIcon} alt="Password icon" className={style.passwordIcon}></img>
+          <input className="inputForm"onChange={handleInputChange} value={userData.password}name="password"type="text" /> <br /> <br />
+        </div>
+        {errors.password && <p className="pError">{errors.password}</p>} <br />
+      </div>
+      <button className={style.btnForm}>ACCEDER</button>
+    </div>
+  </div>
+</form>
 )
 
 

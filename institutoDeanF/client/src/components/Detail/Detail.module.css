@@ -1,20 +1,42 @@
-.butom{
-    border-radius: 8px;
-    height: 2.7rem;
-    width: 10rem;
-    background-color: white;
-    color: #029d36;
-    border-color: #029d36;
-    margin-left: 10px;
-   
+.divcontainer {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: #0c0c0ee7;
+    background-blend-mode: soft-light;
+    background-image: url("../Home/background-image.png");
+    background-attachment: fixed;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
-.butom:hover{
-    background-color: #D0DB97;
-    color: rgb(30, 101, 56);
-    height: 3rem;
-    transition: 8ms;
+
+.butom{
+    width: 120px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    border-color: #800000;
+    border-width: 3px;
+    border-radius: 10px;
+    background-color: white;
+    color: #800000;
+    font-weight:600;
+    margin: 0 0 20px 0;
     cursor: pointer;
+    
+     -webkit-transition: box-shadow 400ms ease-in-out, color 400ms ease-in-out;
+  transition: box-shadow 400ms ease-in-out, color 400ms ease-in-out;
    
+}.butom:hover{
+   cursor: pointer;
+    color: whitesmoke;
+    background-color: #800000;
+    border-color: #800000;
+    box-shadow: 0 0 40px 40px #800000 inset;
 }
 .buttomDiv{
     align-items: center;
@@ -26,20 +48,22 @@
    
 }
 .labelNumbers{
-font-size: 1.5rem;
-
+    font-size: 1.5rem;
+    color: white;
 }
 .label{
-font-size: 1.8rem;
-font-family:'Times New Roman', Times, serif;
-font-weight: bold;
+    font-size: 1.8rem;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: #800000;
+    background-color: aliceblue;
 }
 .contenedor{
     width: 40rem;
     margin-left: 7rem;
 }
 .containerImgandLabel{
-display: flex;
+    display: flex;
 }
 .img{
     border-radius: 3rem;
@@ -52,7 +76,15 @@ display: flex;
    align-items: center;
    justify-content: center;
    width: 100%;
-   background: rgb(43,46,29);
-   background: linear-gradient(0deg, rgba(43,46,29,0.020045518207282953) 8%, rgba(190,221,44,1) 56%);
    text-align: center;
+   color: white;
+}
+
+.title{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 2.5px #800000;
 }

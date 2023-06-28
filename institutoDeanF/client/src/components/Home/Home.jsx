@@ -1,33 +1,19 @@
-import { Link } from "react-router-dom";
+
 import style from "./Home.module.css"
-import NavBar from "../Nav/NavBar"
+import FooterPag from "../Footer/FooterPag";
 
-
-const Home=()=>{
-   
-    
-return (
-    <div className={style.divcontainer}>
-        <header className={style.header}>
-            <div className={style.img}>
-                
+const Home = () => {
+    return (
+        <div className={style.divbody}>
+            <div className={style.divcontainer}>
+            
+                <main className={style.contenido}>
+                    <h1>Bienvenido al sistema educativo de autogestión para la Institucion educativa Dean Funes</h1>
+                </main>
+                <FooterPag/>
             </div>
-           
-            <div className={style.div1}>
-                <Link to="/"><h2 className={style.t1}>INSTITO PRIVADO</h2></Link>
-                <Link to="/"><h2 className={style.t2}>DEAN FUNES</h2></Link>
-            </div>
-            <div className={style.div2}>
-                <NavBar/>  
-            </div>
-        </header>
-        <main className={style.contenido}>
-            <hr className={style.hr1}></hr>
-            <h1>Bienvenido al sistema educativo de autogestion para la Institucion Dean Funes</h1>
-            <hr className={style.hr2}></hr>
-        </main>
-    </div>
-)
+        </div>
+    )
 
 
 }

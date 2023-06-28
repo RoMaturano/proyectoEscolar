@@ -1,22 +1,42 @@
-.cardContainer{
-    background: radial-gradient(rgba(115, 104, 104, 0.641), rgb(49, 40, 40));
-    border-radius: 4.5rem;
-    height: 28rem ;
-    width: 23rem;
-    box-shadow: 5px 5px 5px #affc41;
-}
-
-.divimage{
-    border-radius: 6rem;
-    width: 250px;;
-    height:250px;
-    transition: all 300ms;
-    box-shadow: 5px 5px 5px #affc41;
-    margin-bottom: 10px;
-    margin-left: 3rem;
-    margin-top: 1rem;
-    padding: 0.1rem;
+.cardContainer {
+    background-color: rgba(128, 0, 0, 0.7);
+    height: 10rem;
+    width: 30rem; 
     display: flex;
-    flex-direction: column;
-
-}
+    align-items: center;
+    justify-content: center; 
+    color: white;
+    margin: 30px 0 40px 475px;
+  }
+  
+    .divimage {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      transition: all 300ms;
+      margin-right: 2rem;
+      
+    }
+    
+    .cardContainer h2 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: white;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: left;
+    }   .cardContainer h2:hover {
+      color: yellow;
+    }
+    
+    .cardContainer h3 {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: left;
+    }
+  
+    span{
+      color: rgb(255, 167, 167);
+    }

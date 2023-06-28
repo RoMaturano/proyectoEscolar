@@ -2,8 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import {get_by_name} from "../../Redux/actions"
-
-
+import style from "./SearchBar.module.css"
 
 const SearchBar=()=>{
 const dispatch = useDispatch()
@@ -23,9 +22,9 @@ const handleSubmit=(event)=>{
 
 
 return (
-    <div >
-        <input type='text' placeholder="insert name..." onChange={(event)=>handleInputChange(event)} />
-        <button type='submit' onClick={(event)=>handleSubmit(event)} >BUSCAR</button>
+    <div className= {style.divCoteiner}>
+        <input className={style.input} type='text' placeholder="Introduce un nombre.." onChange={(event)=>handleInputChange(event)} />
+        <button className={style.button} type='submit' onClick={(event)=>handleSubmit(event)} >BUSCAR</button>
     </div>
 )
 

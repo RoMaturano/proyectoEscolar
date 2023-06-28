@@ -1,74 +1,41 @@
-.divcontainer{
-    height: 900px;
+.divbody {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 137vh;
+    background-image: url("../Home/background-image.png");
+}
+.divcontainer {
     width: 100%;
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     background-color: #0c0c0ee7;
     background-blend-mode: soft-light;
-    background-image: url("../Home/background-image.png");
+    background-attachment: fixed;
     text-align: center;
-    margin: 0 0 0 0;
-} 
-
-.header{
-    width: auto;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex; 
-    background-color: rgba(128, 0, 0);
-    
-} .header .img{
-    background-image: url("../Home/logo.png");
-    width: 100px;
-    height: 100px;
-    margin: 0 0 10px 0;
-} .header .div1{
-    line-height: 10px;
-    font-family: 'Inter', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 0 0 0 0;
-} .header .div1 .t1{
-    color: white;
-    font-weight: 600;
-} .header .div1 .t2 {
-    color: white;
-    font-weight: 600; 
-} 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 
 .divcontainer .contenido {
-    width: auto;
-    height: auto;
-    position: relative;
-} .divcontainer .contenido h1 {
+    flex: 1;
+}
+
+.divcontainer .contenido h1 {
     color: white;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    line-height: 50px;
     width: 100%;
-    margin: 0 0 40px 0;
-    font-family: 'Inter', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    word-spacing: 15px;
-}.divcontainer .contenido .hr1 {
-    width: auto;
-    height: 0,5px;
-    border-color: white;
-    border-style: dashed;
-    position: fixed;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    margin: 0 0 40px 0;
-}.divcontainer .contenido .hr2 {
-    width: auto;
-    height: 0,5px;
-    border-color: white;
-    border-style: dashed;
-    position: fixed;
-    top: 58%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    margin: 0 0 40px 0;
+    margin: 190px 0 40px 0;
+    font-family: Verdana, Segoe, sans-serif;
+    word-spacing: 8px;
+    font-size: 40px;
+}
+
+.divcontainer .contenido p {
+    width: 50%;
+    margin: 0 0 0 25%;
+    color: white;
 }

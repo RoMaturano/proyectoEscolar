@@ -1,88 +1,95 @@
-.butom{
-    border-radius: 8px;
-    height: 2.7rem;
-    width: 10rem;
-    background-color: white;
-    color: #029d36;
-    border-color: #029d36;
-    margin-left: 10px;
-   
+.divbody{
+    min-height: 137vh;
+    background-image: url("../Home/background-image.png");
 }
-.butom:hover{
-    background-color: #D0DB97;
-    color: rgb(30, 101, 56);
-    height: 3rem;
-    transition: 8ms;
-    cursor: pointer;
-   
+.divcontainer {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: #0c0c0ee7;
+    background-blend-mode: soft-light;
+    
+    background-attachment: fixed;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
+
 .buttomSend{
-    border-radius: 8px;
-    height: 2.7rem;
-    width: 10rem;
-    background-color: rgb(193, 217, 167);
-    color: #029d36;
-    border-color: #77ce94;
-    margin-left: 10px;
-}
-.buttomSend:hover{
-    background-color: #D0DB97;
-    color: rgb(30, 101, 56);
-    height: 3rem;
-    transition: 8ms;
+    width: 120px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    border-color: #800000;
+    border-width: 3px;
+    border-radius: 10px;
+    background-color: white;
+    color: #800000;
+    font-weight:600;
+    margin: 0 0 120px 0;
     cursor: pointer;
+    
+     -webkit-transition: box-shadow 400ms ease-in-out, color 400ms ease-in-out;
+  transition: box-shadow 400ms ease-in-out, color 400ms ease-in-out;
+   
+}.buttomSend:hover{
+   cursor: pointer;
+    color: whitesmoke;
+    background-color: #800000;
+    border-color: #800000;
+    box-shadow: 0 0 40px 40px #800000 inset;
 }
+
 .span{
-    background-color: #030302;
     color:red;
     font-size: 1rem;
 }
 .label{
-    
-    font-size: 2rem;
-text-transform: uppercase;
-justify-content: space-between;
--webkit-text-fill-color: rgb(10, 10, 10);;
--webkit-text-stroke: 1px rgb(30, 101, 56);
-font-weight: bold;
-text-shadow: 7px 4px 5px #D0DB97;
+    width: 190px;
+    height: auto;
+    text-align: left;
+    margin-left: 130px;
+    color: #ffffff;
+    font-weight: 100;
+    font-family: 'Inter', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    
 }
 .input{
-    width: 15rem;
-    height: 1.2rem;
-    border-radius: 10px;
-    background-color: rgba(244, 215, 175, 0.588);
-   margin-left: 1rem;
+    width: 250px;
+    height: auto;
+    background-color: #800000;
+    color: #ffffff;
 }
 .title{
+    margin: 130px 0 40px 0;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 3rem;
+    font-weight: bolder;
     text-align: center;
-    -webkit-text-fill-color: #029d36;
-    -webkit-text-stroke: 1.5px #030302;
+    color: white;
 }
-.conteinerDivDivs{
+.conteinerDivDivs {
     text-align: center;
     align-items: center;
     align-content: center;
-    align-items: center;
     justify-content: center;
-    background: radial-gradient( #D0DB97, rgb(15, 48, 26));
-   width: 60rem;
-   display:contents;
-   
+    margin: 0 10vw 35px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .divLabelInput{
-    margin-top: 2rem;
+    display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+} .divLabelInput label{
+    width: 180px;
 }
 .buttomDiv{
     align-items: center;
     text-align: center;
-    margin-top:  2rem;
-    justify-content: center;
-    display: flex;
-    margin-bottom: 5rem;
-   
 }
 

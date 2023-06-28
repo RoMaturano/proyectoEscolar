@@ -14,6 +14,9 @@ const {postEscolarCycleHandler}=require("../handler/EscolarCycle/postEscolarCycl
 const {putStudentHandler}=require("../handler/Student/putStudentHandler")
 const {getStaffTeacherHandler}=require("../handler/StaffTeacher/getStaffTeacherHandler")
 const {postStaffTeacherHandler}=require("../handler/StaffTeacher/postStaffTeacher")
+const {putStaffHandler}= require("../handler/StaffTeacher/putStaffHandler")
+const {getStaffByNameHandler}=require("../handler/StaffTeacher/getStaffByNameHandler")
+const {putStaffBannedHandler}= require("../handler/StaffTeacher/putStaffBannedHandler")
 
 
 //student
@@ -35,8 +38,10 @@ router.post("/escolarcycle",postEscolarCycleHandler)
 
 //staff
 router.get("/staff",getStaffTeacherHandler)
+router.get("/staff/:nameStaff",getStaffByNameHandler)
 router.post("/staff",postStaffTeacherHandler)
-
+router.put("/staff",putStaffHandler)
+router.put("/staffB",putStaffBannedHandler)
 
 
 module.exports = router;

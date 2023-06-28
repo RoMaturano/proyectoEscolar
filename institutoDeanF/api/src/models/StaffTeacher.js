@@ -4,6 +4,7 @@ const { DataTypes } = require('sequelize');
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('StaffTeacher', {
+    
     idStaffTeacher:{
       type:DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
@@ -31,6 +32,10 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
       allowNull: true,
     },
+    banned:{
+      type: DataTypes.STRING,
+      defaultValue: "active"
+    }
     
 
  

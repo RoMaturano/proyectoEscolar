@@ -8,8 +8,8 @@ const pageNumbers=[]
 for(let i =1; i<Math.ceil(allStudents/studentWithPage);i++){
     pageNumbers.push(i)
 }
-//console.log(pageNumbers,"pageNumbers")
-//console.log(allStudents,"allStudents");
+console.log(pageNumbers,"pageNumbers")
+console.log(allStudents,"allStudents");
 return (
     <nav className={style.div}>
         <ul>
@@ -19,8 +19,7 @@ return (
                 </li>
             ))}
         </ul>
-
-    </nav>
+     </nav>
 )
 
 }

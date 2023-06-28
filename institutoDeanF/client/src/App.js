@@ -14,9 +14,10 @@ import Attendance from "./components/Attendance/Attendance"
 import Admin from "./components/Administrator/Admin.jsx/Admin";
 import Login from "./components/Login/Login";
 import CrearUsuario from "./components/Administrator/CrearUsuario/CrearUsuario";
-import EditarUsuario from "./components/Administrator/EditarUsuario/EditarUsuario"
-import Bannear from "./components/Administrator/Bannear/BannearUsuario";
-
+import EditUser from "./components/Administrator/EditarUsuario/EditUser"
+import Banned from "./components/Administrator/Banned/Banned";
+import NavBar from "./components/Nav/NavBar";
+import AllUser from "./components/Administrator/AllUser/AllUser";
 function App() {
   const location = useLocation();
 //  const redirect = redirect()
@@ -48,7 +49,7 @@ function App() {
   
   return (
     <div className='app' >
-            {location.pathname === "/" ? <Login login={login} />  : " "}
+            {location.pathname === "/" ? <Login login={login} />  :   <NavBar/>}
             {/* {location.pathname === "/usuario" ? <LoginAdmin  loginAdmin={ loginAdmin} />  : <Admin/>} */}
       <Switch>
       <Route exact path="/home" render={()=><Home/>}/>
@@ -61,8 +62,9 @@ function App() {
         <Route exact path = "/attendance" render={()=><Attendance/>}></Route>
          <Route exact path="/usuario" render={()=><Admin/>} /> 
          <Route exact path = "/crear" render={()=><CrearUsuario/>}></Route> 
-         <Route exact path = "/editar" render={()=><EditarUsuario/>}></Route> 
-          <Route exact path = "/bannear" render={()=><Bannear/>}></Route> 
+         <Route exact path = "/editar" render={()=><EditUser/>}></Route> 
+         <Route exact path="/banned" render={()=><Banned/>} /> 
+          <Route exact path="/alluser" render={()=><AllUser/>} /> 
           
       </Switch>
     </div>
